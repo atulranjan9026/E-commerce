@@ -14,8 +14,12 @@ dotenv.config();
 //databse config
 connectDB();
 
-//rest object
 const app = express();
+
+app.use(express.json({ limit: '10mb' })); // Increase limit to 10MB or set to an appropriate value
+app.use(express.urlencoded({ limit: '10mb', extended: true }));
+
+//rest object
 app.use(express.json());
 app.use(morgan("dev"));
 

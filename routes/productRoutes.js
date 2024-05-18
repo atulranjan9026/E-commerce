@@ -23,16 +23,16 @@ const router = express.Router();
 //routes
 router.post(
   "/create-product",
-  // requireSignIn,
-  // isAdmin,
+  requireSignIn,
+  isAdmin,
   formidable(),
   createProductController
 );
 //routes
 router.put(
   "/update-product/:pid",
-  // requireSignIn,
-  // isAdmin,
+  requireSignIn,
+  isAdmin,
   formidable(),
   updateProductController
 );
@@ -73,7 +73,7 @@ router.get("/braintree/token", braintreeTokenController);
 
 //payments
 router.post("/braintree/payment", 
-// requireSignIn, 
+requireSignIn, 
 brainTreePaymentController);
 
 export default router;

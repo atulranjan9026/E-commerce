@@ -22,7 +22,9 @@ import AdminOrders from "./pages/Admin/AdminOrders";
 import ProductDetails from "./pages/ProductDetails";
 import Categories from "./pages/Categories";
 import CategoryProduct from "./pages/CategoryProduct";
-// import CartPage from "./pages/CartPage";
+import CartPage from "./pages/CartPage";
+import Search from "./pages/Search";
+
 function App ()  {
   return (
     <>
@@ -30,7 +32,8 @@ function App ()  {
      <Route path="/" element={<HomePage/>} />
      <Route path="/product/:slug" element={<ProductDetails />} />
      <Route path="/categories" element={<Categories />} />
-     {/* <Route path="/cart" element={<CartPage />} /> */}
+     <Route path="/cart" element={<CartPage />} />
+     <Route path="/search" element={<Search />} />
      <Route path="/category/:slug" element={<CategoryProduct />} />
      <Route path="/dashboard" element={<PrivateRoute />}>
           <Route path="user" element={<Dashboard />} />

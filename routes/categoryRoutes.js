@@ -14,8 +14,8 @@ const router = express.Router();
 // create category
 router.post(
   "/create-category",
-  // isAdmin,
-  // requireSignIn,
+  requireSignIn,
+  isAdmin,
   createCategoryController,
   (req, res) => {
     console.log("Error in creating a new Category");
@@ -31,8 +31,8 @@ router.use((err, req, res, next) => {
 // update category
 router.put(
   "/update-category/:id",
-  // isAdmin,
-  // requireSignIn,
+  requireSignIn,
+  isAdmin,
   updateCategoryController
 );
 
@@ -45,8 +45,8 @@ router.get("/single-category/:slug", singleCategoryController);
 //delete category
 router.delete(
   "/delete-category/:id",
-  // isAdmin,
-  // requireSignIn,
+  requireSignIn,
+  isAdmin,
   deleteCategoryCOntroller
 );
 
