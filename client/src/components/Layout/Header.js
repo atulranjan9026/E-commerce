@@ -11,15 +11,18 @@ const Header = () => {
   const [auth, setAuth] = useAuth();
   const [cart] = useCart();
   const categories = useCategory();
+
   const handleLogout = () => {
     setAuth({
       ...auth,
       user: null,
       token: "",
     });
-    localStorage.removeItem("auth");
+    // localStorage.removeItem("auth");
+    localStorage.removeItem("cart");
     toast.success("Logout Successfully");
   };
+  
   return (
     <>
        <nav className="navbar navbar-expand-lg bg-body-tertiary ">

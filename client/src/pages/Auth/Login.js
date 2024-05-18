@@ -5,10 +5,7 @@ import toast from "react-hot-toast";
 import "../../styles/AuthStyles.css";
 import axios from "../../hooks/axios.js";
 import { useAuth } from "../../context/auth.js";
-// const jwtSecret = process.env.JWT_SECRET;
 
-// console.log("jwtSecret:", process.env.JWT_SECRET);
-// console.log(useAuth)
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -47,9 +44,9 @@ const Login = () => {
   return (
     <Layout title="Register - Ecommer App">
       <div className="form-container" style={{ minHeight: "90vh" }}>
+      
         <form onSubmit={handleSubmit}>
           <h4 className="title">REGISTER FORM</h4>
-         
           <div className="mb-3">
             <input
               type="email"
