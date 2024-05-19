@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
-import Layout from "./../../components/Layout/Layout";
-import AdminMenu from "./../../components/Layout/AdminMenu";
+import Layout from "./../../components/Layout/Layout.js";
+import AdminMenu from "./../../components/Layout/AdminMenu.js";
 import toast from "react-hot-toast";
-import axios from "../../hooks/axios";
+import axios from "../../hooks/axios.js";
 import { Select } from "antd";
 import { useNavigate, useParams } from "react-router-dom";
 const { Option } = Select;

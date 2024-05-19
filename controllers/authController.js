@@ -158,7 +158,6 @@ export const forgotPasswordController = async (req, res) => {
 export const testController = (req, res) => {
   try {
     res.send("Protected Routes");
-    console.log("Protected Routes 'Test'")
   } catch (error) {
     console.log(error);
     res.send({ error });

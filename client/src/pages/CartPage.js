@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Layout from "./../components/Layout/Layout";
-import { useCart } from "../context/cart";
-import { useAuth } from "../context/auth";
+import Layout from "./../components/Layout/Layout.js";
+import { useCart } from "../context/cart.js";
+import { useAuth } from "../context/auth.js";
 import { useNavigate } from "react-router-dom";
 import DropIn from "braintree-web-drop-in-react";
 import { AiFillWarning } from "react-icons/ai";
-import axios from "../hooks/axios";
+import axios from "../hooks/axios.js";
 import toast from "react-hot-toast";
 import "../styles/CartStyles.css";
 
@@ -17,7 +17,7 @@ const CartPage = () => {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
 
-  // console.log(clientToken)
+  
   //total price
   const totalPrice = () => {
     try {
@@ -68,7 +68,6 @@ const CartPage = () => {
       nonce,
       cart,
     });
-    console.log("data:",data)
     setLoading(false);
     localStorage.removeItem("cart");
     setCart([]);

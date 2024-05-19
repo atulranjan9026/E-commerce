@@ -18,7 +18,7 @@ router.post(
   isAdmin,
   createCategoryController,
   (req, res) => {
-    console.log("Error in creating a new Category");
+    // console.log("Error in creating a new Category");
     return res.status(500).json({ message: "Server Error" });
   }
 );

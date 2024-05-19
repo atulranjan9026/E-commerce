@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
-import UserMenu from "../../components/Layout/UserMenu";
-import Layout from "./../../components/Layout/Layout";
-import { useAuth } from "../../context/auth";
+import UserMenu from "../../components/Layout/UserMenu.js";
+import Layout from "./../../components/Layout/Layout.js";
+import { useAuth } from "../../context/auth.js";
 import toast from "react-hot-toast";
-import axios from "../../hooks/axios";
+import axios from "../../hooks/axios.js";
 const Profile = () => {
   //context
   const [auth, setAuth] = useAuth();

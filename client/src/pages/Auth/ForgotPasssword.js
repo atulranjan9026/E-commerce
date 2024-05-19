@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Layout from "./../../components/Layout/Layout";
+import Layout from "./../../components/Layout/Layout.js";
 import axios from "../../hooks/axios.js";
 import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
@@ -34,7 +34,6 @@ const ForgotPasssword = () => {
       toast.error("Something went wrong");
     }
   };
-  // console.log("res :",res)
   return (
     <Layout title={"Forgot Password - Ecommerce APP"}>
       <div className="form-container ">

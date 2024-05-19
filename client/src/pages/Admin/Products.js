@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import AdminMenu from "../../components/Layout/AdminMenu";
-import Layout from "./../../components/Layout/Layout";
+import AdminMenu from "../../components/Layout/AdminMenu.js";
+import Layout from "./../../components/Layout/Layout.js";
 import axios from "../../hooks/axios.js";
 import toast from "react-hot-toast";
 import { Link } from "react-router-dom";
 const Products = () => {
   const [products, setProducts] = useState([]);
-console.log(products[1])
   //getall products
   const getAllProducts = async () => {
     try {

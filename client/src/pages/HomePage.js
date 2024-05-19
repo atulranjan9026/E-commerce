@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { Checkbox, Radio } from "antd";
-import { Prices } from "../components/Prices";
-import { useCart } from "../context/cart";
-import axios from "../hooks/axios";
+import { Prices } from "../components/Prices.js";
+import { useCart } from "../context/cart.js";
+import axios from "../hooks/axios.js";
 import toast from "react-hot-toast";
-import Layout from "./../components/Layout/Layout";
+import Layout from "./../components/Layout/Layout.js";
 import { AiOutlineReload } from "react-icons/ai";
 import "../styles/Homepage.css";
 

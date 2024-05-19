@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
-import Layout from "./../../components/Layout/Layout";
-import AdminMenu from "./../../components/Layout/AdminMenu";
+import Layout from "./../../components/Layout/Layout.js";
+import AdminMenu from "./../../components/Layout/AdminMenu.js";
 import toast from "react-hot-toast";
-import axios from "../../hooks/axios";
-import CategoryForm from "../../components/Form/CategoryForm";
+import axios from "../../hooks/axios.js";
+import CategoryForm from "../../components/Form/CategoryForm.js";
 import { Modal } from "antd";
 const CreateCategory = () => {
   const [categories, setCategories] = useState([]);
@@ -18,7 +18,6 @@ const CreateCategory = () => {
       const { data } = await axios.post("/api/v1/category/create-category", {
         name,
       });
-      console.log("create-category:",data);
       if (data?.success) {
         toast.success(`${name} is created`);
         getAllCategory();
@@ -35,7 +34,7 @@ const CreateCategory = () => {
   const getAllCategory = async () => {
     try {
       const { data } = await axios.get("/api/v1/category/get-category");
-      console.log("get-category:",data);
+      
       if (data?.success) {
         setCategories(data?.category);
       }

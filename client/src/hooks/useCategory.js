@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import axios from "../hooks/axios";
+import axios from "../hooks/axios.js";
 
 export default function useCategory() {
   const [categories, setCategories] = useState([]);
