@@ -68,6 +68,11 @@ const Login = () => {
               placeholder="Enter Your Password"
               required
             />
+          </div >
+          <div className="mb-3">
+          <button type="submit" className="btn btn-primary">
+            Login
+          </button>
           </div>
           <div className="mb-3">
             <button
@@ -80,9 +85,7 @@ const Login = () => {
               Forgot Password
             </button>
           </div>
-          <button type="submit" className="btn btn-primary">
-            Login
-          </button>
+          
         </form>
       </div>
     </Layout>

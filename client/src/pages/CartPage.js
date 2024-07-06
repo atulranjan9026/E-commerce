@@ -16,8 +16,8 @@ const CartPage = () => {
   const [instance, setInstance] = useState("");
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
-
-  
+  console.log("DropIn:",DropIn);
+  // console.log(clientToken)
   //total price
   const totalPrice = () => {
     try {
@@ -68,6 +68,7 @@ const CartPage = () => {
       nonce,
       cart,
     });
+    console.log("data:",data)
     setLoading(false);
     localStorage.removeItem("cart");
     setCart([]);
