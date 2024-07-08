@@ -11,7 +11,7 @@ import { CartProvider } from "./context/cart.js"; // Add .js extension
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <>
-    <React.StrictMode>
+    {/* <React.StrictMode> */}
       <AuthProvider>
         <SearchProvider>
           <CartProvider>
@@ -21,7 +21,7 @@ root.render(
           </CartProvider>
         </SearchProvider>
       </AuthProvider>
-    </React.StrictMode>
+    {/* </React.StrictMode> */}
   </>
 );
 

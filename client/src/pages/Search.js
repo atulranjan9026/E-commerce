@@ -1,8 +1,12 @@
 import React from "react";
 import Layout from "./../components/Layout/Layout.js";
+import { useCart } from "../context/cart.js";
 import { useSearch } from "../context/search.js";
+import toast from "react-hot-toast";
+
 const Search = () => {
   const [values, setValues] = useSearch();
+  const [cart, setCart] = useCart();
   return (
     <Layout title={"Search results"}>
       <div className="container">
@@ -17,7 +21,7 @@ const Search = () => {
             {values?.results.map((p) => (
               <div className="card m-2" style={{ width: "18rem" }}>
                 <img
-                  src={`/api/v1/product/product-photo/${p._id}`}
+                  src={`http://localhost:8080/api/v1/product/product-photo/${p._id}`}
                   className="card-img-top"
                   alt={p.name}
                 />
@@ -28,7 +32,14 @@ const Search = () => {
                   </p>
                   <p className="card-text"> $ {p.price}</p>
                   <button class="btn btn-primary ms-1">More Details</button>
-                  <button class="btn btn-secondary ms-1">ADD TO CART</button>
+                  <button class="btn btn-secondary ms-1"  onClick={() => {
+                        setCart([...cart, p]);
+                        localStorage.setItem(
+                          "cart",
+                          JSON.stringify([...cart, p])
+                        );
+                        toast.success("Item Added to cart");
+                      }}>ADD TO CART</button>
                 </div>
               </div>
             ))}

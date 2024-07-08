@@ -58,7 +58,7 @@ function App ()  {
      <Route path="*" element={<Pagenotfound/>} />
    </Routes>
     </>
-  )
+  );
 }
 
 export default App; 
