@@ -46,9 +46,15 @@ app.use("*", (req, res) => {
 // Define PORT ..
 const PORT = process.env.PORT || 7080;
 
+<<<<<<< HEAD
 app.get("/error",(res,req)=>{
   res.send("Hello World")
 })
+=======
+app.get("/", (req, res) => {
+  res.send("Hello World");
+});
+>>>>>>> 1008e143380c8050b4159deeb56af2ac077a19c9
 
 // Start server
 app.listen(PORT, () => {
