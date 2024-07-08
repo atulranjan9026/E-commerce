@@ -10,7 +10,7 @@ import cors from "cors";
 import path from "path";
 import { fileURLToPath } from 'url';
 
-// Configure environment variables
+// Configure environment variables.
 dotenv.config();
 
 // Database configuration
