@@ -46,7 +46,7 @@ app.use("*", (req, res) => {
 // Define PORT ..
 const PORT = process.env.PORT || 7080;
 
-app.get("/",(res,req)=>{
+app.get("/error",(res,req)=>{
   res.send("Hello World")
 })
 
