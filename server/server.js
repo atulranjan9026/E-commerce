@@ -31,7 +31,7 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 // Serve static files from the 'build' directory
-app.use(express.static(path.join(__dirname, './client/build')));
+app.use(express.static(path.join(__dirname, '../client/build')));
 
 // API routes
 app.use("/api/v1/auth", authRoutes);
@@ -40,7 +40,7 @@ app.use("/api/v1/product", productRoutes);
 
 // Catch-all handler to send back React's index.html file for any other requests
 app.use("*", (req, res) => {
-  res.sendFile(path.join(__dirname, './client/build/index.html'));
+  res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
 // Define PORT
