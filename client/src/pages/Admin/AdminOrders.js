@@ -3,7 +3,7 @@ import axios from "../../hooks/axios.js";
 import toast from "react-hot-toast";
 import AdminMenu from "../../components/Layout/AdminMenu.js";
 import Layout from "../../components/Layout/Layout.js";
-import { useAuth } from "../../context/auth.js";
+import { useAuth } from "../../context/auth.jsx";
 import moment from "moment";
 import { Select } from "antd";
 const { Option } = Select;
